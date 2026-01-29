@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Play, RotateCcw, Settings, BarChart3, Info, Edit3, Shuffle, Heart } from 'lucide-react';
+import { Play, RotateCcw, Settings, BarChart3, Info, Edit3, Shuffle } from 'lucide-react';
 
 // --- DATA TEORI ---
 const ALGO_INFO = {
