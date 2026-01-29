@@ -206,12 +206,12 @@ const App = () => {
   };
 
   return (
-    // Tambahkan 'flex flex-col' agar footer bisa didorong ke bawah
     <div className="min-h-screen bg-[#0b1120] text-slate-200 font-sans selection:bg-blue-500/30 flex flex-col">
       
-      {/* --- HEADER --- */}
+      {/* --- HEADER (Lebih Tipis di Desktop) --- */}
       <nav className="border-b border-slate-700 bg-slate-900/80 backdrop-blur-md sticky top-0 z-50 shadow-2xl transition-all">
-        <div className="max-w-7xl mx-auto px-4 md:px-6 h-20 md:h-28 flex items-center justify-between">
+        {/* Ubah md:h-28 menjadi md:h-24 */}
+        <div className="max-w-7xl mx-auto px-4 md:px-6 h-20 md:h-24 flex items-center justify-between">
           <div className="flex items-center gap-3 md:gap-4">
             <div className="p-2 md:p-3 bg-blue-600 rounded-xl shadow-lg shadow-blue-500/20 transform hover:scale-105 transition-transform">
                 <BarChart3 className="text-white w-6 h-6 md:w-8 md:h-8" />
@@ -240,12 +240,13 @@ const App = () => {
         </div>
       </nav>
 
-      {/* --- CONTENT --- */}
-      {/* flex-grow agar konten mengisi ruang kosong sebelum footer */}
-      <main className="flex-grow max-w-7xl mx-auto px-4 md:px-6 py-6 md:py-10 flex flex-col gap-6 md:gap-10 w-full">
+      {/* --- CONTENT (Padding Desktop Dikurangi) --- */}
+      {/* Ubah md:py-10 menjadi md:py-8 */}
+      <main className="flex-grow max-w-7xl mx-auto px-4 md:px-6 py-6 md:py-8 flex flex-col gap-6 md:gap-8 w-full">
         
-        {/* Stage Grafik */}
-        <section className="relative w-full h-[300px] md:h-[500px] bg-slate-800/40 rounded-3xl border border-slate-700/50 backdrop-blur-sm shadow-2xl overflow-hidden flex flex-col p-2 pt-12 md:pt-12">
+        {/* Stage Grafik (Lebih Pendek di Desktop) */}
+        {/* Ubah md:h-[500px] menjadi md:h-[420px] dan md:pt-12 menjadi md:pt-10 */}
+        <section className="relative w-full h-[300px] md:h-[420px] bg-slate-800/40 rounded-3xl border border-slate-700/50 backdrop-blur-sm shadow-2xl overflow-hidden flex flex-col p-2 pt-12 md:pt-10">
           <div className="absolute top-4 left-4 md:top-6 md:left-6 z-10 bg-slate-900/90 backdrop-blur px-4 py-2 md:px-6 md:py-3 rounded-xl border border-slate-600 shadow-xl max-w-[200px] md:min-w-[350px]">
             <span className="text-[8px] md:text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1 block">Real-time System Log</span>
             <div className="text-xs md:text-lg font-mono text-cyan-300 truncate font-medium"> {'>'} {logText} </div>
@@ -336,12 +337,11 @@ const App = () => {
         </div>
       </main>
 
-      {/* --- FOOTER (NEW) --- */}
-      <footer className="border-t border-slate-800 bg-slate-900 py-8 mt-10">
+      {/* --- FOOTER --- */}
+      <footer className="border-t border-slate-800 bg-slate-900 py-8 mt-6 md:mt-10">
         <div className="max-w-7xl mx-auto px-6 text-center md:text-right">
             <p className="text-slate-400 text-sm flex items-center justify-center md:justify-end gap-1">
-              &copy; 2026 All rights reserved by{' '}
-              {/* Jangan lupa Ganti href di bawah ini dengan link Portofolio asli Anda */}
+              &copy; 2026 All rights reserved by
               <a 
                 href="https://nouval-arrizqy.netlify.app/" 
                 target="_blank" 
